@@ -8,7 +8,7 @@ const insert = (content) => {// Find Calmly editor input section
     const element = elements[0];
 
 
-    // Grab the first p tag so we can replace it with our injection
+    // Grab the first p tag so we can replace it with our injectionn
 const pToRemove = element.childNodes[0];
 pToRemove.remove();
   
