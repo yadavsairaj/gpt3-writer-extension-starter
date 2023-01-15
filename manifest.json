@@ -1,6 +1,6 @@
 {
-  "name": "GPT-3 Writer",
-  "description": "Write a blog post in the style of your favorite thinker anywhere!",
+  "name": "sup, Enhancing Writing Skills with AI-Enabled Grading",
+  "description": "An AI-powered essay grading system to help students improve their writing skills that uses GPT-3 to Streamline essay grading process to save time",
   "version": "1.0",
   "manifest_version": 3,
   "icons": {
@@ -11,6 +11,19 @@
   },
   "action": {
     "default_popup": "index.html",
-    "default_title": "Generate blog post"
-  }
+    "default_title": "Enhancing Writing Skills with AI-Enabled Grading"
+  },
+  "background": {
+    "service_worker": "scripts/contextMenuServiceWorker.js"
+  },
+  "permissions": ["contextMenus", "tabs", "storage"],
+  
+  "host_permissions": ["https://*/*"],
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
 }
